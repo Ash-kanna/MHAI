@@ -252,4 +252,22 @@ img {
     }
 }
 
-/* Media query for skjermstørrelser opp til 928px */
+@media screen and (max-width: 650px) {
+    img {
+        width: 200px;
+    }
+    #main-1 {
+        width: 200px;
+    }
+}
+
+/* Media query for skjermstørrelser opp til 350px */
+@media screen and (max-width: 350px) {
+    img {
+        width: 140px;
+    }
+
+    #main-1 {
+        width: 100px;
+    }
+}
