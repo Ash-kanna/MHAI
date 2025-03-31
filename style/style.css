@@ -1,4 +1,7 @@
 /* Setter standard innstillinger for før- og etter-elementer */
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
+
+/* Setter standard innstillinger for før- og etter-elementer */
 *::before,
 *::after {
     box-sizing: border-box; /* Inkluderer padding og border i elementets totale bredde og høyde */
@@ -18,8 +21,12 @@ body {
     background-color: #fff; /* Default background color */
     color: #000; /* Default text color */
     transition: all 0.3s ease; /* Smooth transitions for changes */
+    scrollbar-width: none;
 }
 
+p {
+    font-size: 16px;
+}
 /* Stil for headeren */
 #header1 {
     width: 100%; /* Setter bredden til 100% av foreldreelementet */
@@ -40,27 +47,6 @@ footer {
     z-index: 0; /* Setter z-indeksen for lagdeling */
 }
 
-.off-screen-menu {
-    background-color:  rgb(213, 251, 251);
-    height: 100vh;
-    width: 100%;
-    max-width: 450px;
-    position: fixed; /* Holder navigasjonslinjen på toppen når man scroller */
-    top: 0; /* Plasserer den på toppen av siden */
-    right: -500px;
-    flex-direction: column;
-    justify-content: center; /* Sentrerer innholdet horisontalt */
-    align-items: center; /* Sentrerer innholdet vertikalt */
-    text-align: center;
-    font-size: 3rem; /* Setter fontstørrelse */
-    transition: .3 ease;
-    opacity: 100%;
-}
-
-.off-screen-menu.active {
-    right: 1px;
-}
-
 nav {
     padding: 2rem;
     display: flex;
@@ -69,28 +55,25 @@ nav {
 
 /* Stil for navigasjonslinjen */
 .navbar {
-    height: auto; /* Høyden tilpasses innholdet */
     display: flex; /* Bruker flexbox for layout */
     z-index: 3; /* Setter z-indeksen for lagdeling */
     width: 100%; /* Setter bredden til 100% */
-    height: 11vh;
+    height: 11vh; /* Høyden tilpasses innholdet */
     top: 0;
     background-color: rgb(213, 251, 251);
     position: fixed; /* Fester navigasjonslinjen til toppen av vinduet */
 }
 
-
 .logo-container {
     display: flex;
-    width: 15rem;
+    flex:1;
     align-items: center;
     justify-content: center;
     align-self: center;
     background-image: linear-gradient(to top, rgb(33, 182, 241) 0%, rgb(0, 0, 0) 100%); /* Setter gradientbakgrunn */
     background-size: 100%; /* Setter bakgrunnsstørrelse */
     background-clip: text; /* Klipper bakgrunnen til teksten */
-    -webkit-text-fill-color: transparent; /* Gjør teksten gjennomsiktig for gradienten */
-    -moz-text-fill-color: transparent; /* Gjør teksten gjennomsiktig for gradienten */
+    color: transparent;
 }
 
 /* Stil for logoen i navigasjonslinjen */
@@ -98,32 +81,11 @@ nav {
     background-image: linear-gradient(to top, rgb(33, 182, 241) 0%, rgb(0, 0, 0) 100%); /* Setter gradientbakgrunn */
     background-size: 100%; /* Setter bakgrunnsstørrelse */
     background-clip: text; /* Klipper bakgrunnen til teksten */
-    -webkit-text-fill-color: transparent; /* Gjør teksten gjennomsiktig for gradienten */
-    -moz-text-fill-color: transparent; /* Gjør teksten gjennomsiktig for gradienten */
+    color: transparent;
     position: relative; /* Setter posisjon til relativ */
     cursor: pointer; /* Endrer musepekeren til hånd når man holder over */
     text-decoration-skip-ink: none; /* Fjerner understrykning */
     font-size: 2.4rem; /* Setter fontstørrelse */
-}
-
-/* Stil for ikonet */
-.fa-gem {
-    margin: 2rem; /* Legger til margin rundt ikonet */
-}
-
-/* Stil for navigasjonsmenyen */
-.navbar__menu {
-    display: flex; /* Bruker flexbox for layout */
-    position: fixed; /* Fester menyen til toppen av vinduet */
-    align-items: center; /* Sentrerer innholdet vertikalt */
-    list-style: none; /* Fjerner punktmerking fra listen */
-    text-align: center; /* Sentrerer teksten */
-}
-
-/* Stil for hvert element i navigasjonsmenyen */
-.navbar__item {
-    height: auto; /* Høyden tilpasses innholdet */
-    padding: 10px; /*Legger til padding rundt nav-listen*/
 }
 
 /* Stil for lenkene i navigasjonsmenyen */
@@ -136,6 +98,8 @@ nav {
 
 /* Stil for navigasjonscontaineren */
 .navbar__container {
+    display: flex;
+    flex:1;
     padding: 0 10px; /* Legger til padding på venstre og høyre side */
     align-items: center;
     justify-content: center;
@@ -147,7 +111,6 @@ nav {
     display: flex; /* Bruker flexbox for layout */
     align-items: center; /* Sentrerer innholdet vertikalt */
     justify-content: center; /* Sentrerer innholdet horisontalt */
-    width: fit-content;
     padding: 10px;
 }
 
@@ -166,20 +129,19 @@ nav {
     justify-content: center; /* Sentrerer innholdet horisontalt */
     align-items: center; /* Sentrerer innholdet vertikalt */
     text-decoration: none; /* Fjerner understrykning fra teksten */
-    text-size-adjust: 50px;
     padding: 10px; /* Legger til padding på toppen/bunnen og venstre/høyre */
     margin: 5px;
     height: 100%; /* Setter høyden til 100% av foreldreelementet */
-    width: 100%; /* Setter bredden til 100% av foreldreelementet */
+    width: 5vh; /* Setter bredden til 100% av foreldreelementet */
     border: none; /* Fjerner kantlinje */
     outline: none; /* Fjerner fokusramme */
     border-radius: 10px 0; /* Runding av hjørnene */
-    background: rgb(75, 209, 253); /* Setter bakgrunnsfarge */
-    color: aliceblue; /* Setter tekstfarge */
+    background: rgb(50, 120, 150); /* Setter bakgrunnsfarge */
+    color: white; /* Setter tekstfarge */
 }
 /* Stil for knappen når musen er over den */
 .button2:hover {
-    background: rgb(240, 100, 102); /* Endrer bakgrunnsfarge ved hover */
+    background: rgb(300, 70, 100); /* Endrer bakgrunnsfarge ved hover */
     transition: all 0.3s ease; /* Legger til overgangseffekt */
 }
 
@@ -200,7 +162,7 @@ body {
 
 /* Stil for hovedinnholdet */
 .main__content {
-width: 100%; /* Setter bredden til 100% */
+    width: 100%; /* Setter bredden til 100% */
     min-height: fit-content; /* Setter minimum høyde til innholdets høyde */
 }
 
@@ -212,8 +174,6 @@ main {
     background-color: rgb(255, 255, 255); /* Setter bakgrunnsfarge til hvit */
     z-index: 0; /* Setter z-indeksen for lagdeling */
     width: calc(100% - 60px); /* Setter bredden til 100% */
-    max-width: 1500px; /* Setter maksimal bredde */
-    min-height: fit-content; /* Setter minimum høyde til innholdets høyde */
     max-height: 1500px; /* Setter maksimal høyde */
     padding: 20px; /* Legger til padding */
 }
@@ -221,13 +181,13 @@ main {
 /* Stil for første hovedseksjon */
 #main-1 {
     display: block; /* Bruker block-layout */
-    flex: 1; /* Setter fleksibilitet */
+    flex: 5%; /* Setter fleksibilitet */
 }
 
 /* Stil for andre hovedseksjon */
 #main-2 {
     display: grid;
-    flex: 15rem;
+    flex: 24rem;
     flex-direction: column; /* Setter retning til kolonne */
     align-items: center; /* Sentrerer innholdet horisontalt */
     justify-self: center; /* Sentrerer innholdet vertikalt */
@@ -235,25 +195,28 @@ main {
     background-size: 100%; /* Setter bakgrunnsstørrelse */
 }
 
-/* Stil for tredje hovedseksjon & bilde */
+/* Stil for tredje hovedseksjon */
 #main-3 {
-    display: grid; /* Bruker blokkvisning */
-    flex: 1; /* Setter fleksibilitet */
-    height: 100%;
-    width: 100%;
-    position: relative;
-    top: -60rem;
-    left: -25rem;
+    display: block; /* Bruker blokkvisning */
+    flex: 5%; /* Setter fleksibilitet */
 }
 
-img {
-    width: 370px;
-    height: auto;
+/* Stil for en liste */
+#ul2 {
+    display: inline-block;
+    text-align: left;
+    position: relative; /* Setter posisjon til relativ */
+    width: 50px; /* Setter bredde */
+    height: 140px; /* Setter høyde */
+    top: 20px; /* Setter avstand fra toppen */
 }
-
-picture {
-    width: 400px;
-    height: auto;
+/* Stil for h4-elementet med ID h4__1 */
+#h4__1 {
+    position: relative; /* Setter posisjon til relativ for å kunne bruke top/left */
+    width: 100%; /* Setter bredden til 100% av foreldreelementet */
+    height: 10px; /* Setter høyden til 10px */
+    top: 20px; /* Setter avstand fra toppen */
+    left: 0; /* Setter avstand fra venstre */
 }
 
 /* Stil for overskrifter */
@@ -265,8 +228,8 @@ picture {
     background-clip: text; /* Klipper bakgrunnen til teksten */
     color: transparent; /* Gjør teksten gjennomsiktig for gradienten */
     text-align: center; /* Sentrerer teksten */
-    padding-top: 50px;
-    height: 40px; /* Setter høyden til 40px */
+    padding-top: 25px;
+    height: 45px; /* Setter høyden til 40px */
 }
 
 /* Stil for avsnitt i hovedinnholdet */
@@ -284,8 +247,8 @@ picture {
     height: 100%; /* Setter høyden til 100% av foreldreelementet */
     width: 100%; /* Setter bredden til 100% av foreldreelementet */
     position: relative;
-    top: -20rem;
-    left: -12rem;
+    top: -60rem;
+    left: -40rem;
 }
 
 @media (min-width: 1200px) {
@@ -301,13 +264,6 @@ picture {
 
 /* Media query for skjermstørrelser opp til 1000px */
 @media screen and (max-width: 1000px) {
-
-    /* Stil for hovedinnholdet */
-    .main__content {
-        text-align: center; /* Sentrerer teksten */
-        margin-bottom: 4rem; /* Legger til margin på bunnen */
-    }
-    
     img {
         height: 400px;
         width: auto;
@@ -318,12 +274,16 @@ picture {
         left: -6rem;
     }
 
-
-    /* Stil for h2-elementer i hovedinnholdet */
-    .main__content h2 {
-        font-size: 2.5rem; /* Setter fontstørrelse til 2.5rem */
-        margin-top: 70px; /* Legger til margin på toppen */
+    /* Stil for hovedinnholdet */
+    .main__content {
+        text-align: center; /* Sentrerer teksten */
+        margin-bottom: 4rem; /* Legger til margin på bunnen */
     }
+
+    .navbar__textSize {
+        display: none;
+    }
+
 
     /* Stil for footer */
     footer {
@@ -333,12 +293,6 @@ picture {
         color: rgb(255, 255, 255); /* Setter tekstfarge til hvit */
     }
 
-
-    /* Stil for overskrifter i media query */
-    .overskrifter {
-        font-size: 1rem; /* Setter fontstørrelse til 1rem */
-    }
-  
     /* Stil for første hovedseksjon */
     #main-1 {
         display: grid; /* Bruker grid-layout */
@@ -349,8 +303,13 @@ picture {
         display: grid;
         flex: 150rem;
     }
-}
 
+    /* Stil for tredje hovedseksjon */
+    #main-3 {
+        display: block; /* Bruker blokkvisning */
+        flex: 90%; /* Setter fleksibilitet */
+    }
+}
 
 /* Media query for skjermstørrelser opp til 928px */
 @media screen and (max-width: 928px) {

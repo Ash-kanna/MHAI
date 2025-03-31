@@ -1,3 +1,6 @@
+import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+
 const anchorEl = document.body.querySelector('#usage-anchor');
 const menuEl = document.body.querySelector('#usage-menu');
 
@@ -5,22 +8,26 @@ anchorEl.addEventListener('click', () => { menuEl.open = !menuEl.open; });
 
 
 
-const menu = document.querySelector('#mobile-menu');
-const menuLinks = document.querySelector('.navbar__menu');
+function changeFontSize(action) {
+    const body = document.body;
+    const currentSize = window.getComputedStyle(body).fontSize;
+    let newSize = parseFloat(currentSize);
 
-menu.addEventListener('click', function() { // Korrigert fra 'clik' til 'click'
-    menu.classList.toggle('is-active');
-    menuLinks.classList.toggle('active');
-});
+    if (action === 'increase') {
+        newSize += 2; // Øk med 2 piksler
+    } else {
+        newSize -= 2; // Reduser med 2 piksler
+    }
 
-function setFontSize(size) {
-    localStorage.setItem('fontSize', size);
-    document.body.style.fontSize = size + 'px';
+    body.style.fontSize = newSize + 'px';
+    localStorage.setItem('fontSize', newSize + 'px'); // Lagre tekststørrelse
 }
+
 
 function applySavedPreferences() {
     const savedFontSize = localStorage.getItem('fontSize');
+
     if (savedFontSize) {
-        document.body.style.fontSize = savedFontSize + 'px';
+        document.body.style.fontSize = savedFontSize;
     }
 }

@@ -2,20 +2,33 @@
 <html lang="no">
 
 <head>
+
     <!-- Importerer en Google-font for styling av nettsiden -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
-    </style>
+
     <!-- Setter tegnkoding for dokumentet -->
     <meta charset="UTF-8">
     <!-- Sikrer at siden er responsiv på forskjellige enheter -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="ogevneno">
+    <meta name="keywords" content="Adea">
+    <meta property="og:title" content="Adea's Nettside">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ash-kanna.github.io/portefoljeside/">
+    <meta property="og:image" content="bilder/mhai.png?format=webp">
+    <meta property="og:site_name" content="Adea's nettside">
+
+    <link rel="icon" href="bilder/mhai.png?format=webp" sizes="any">
+    <link rel="apple-touch-icon" href="bilder/mhai.png?format=webp" aria-label="Default">
+    <meta name="theme-color" content="#ffffff">
+
     <!-- Tittel på nettsiden som vises i nettleserfanen -->
-    <title>MHAI's nettside</title>
+    <title>MHAI's Nettside | Entrepenør ide | inkludere lit prosjekt informasjon, ide og mer </title>
     <!-- Kobler til en ekstern CSS-stilark for ekstra styling -->
     <link rel="stylesheet" href="style/style.css">
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <!--  Importere ikoner og Material Design  -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap&display=optional&display=fallback" rel="stylesheet">
     <script type="importmap">
         {
           "imports": {
@@ -25,73 +38,48 @@
     </script>
     <script type="module">
         import '@material/web/common.js';
-        import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
-    
-        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
 </head>
-
-<body onload="applySavedPreferences()">
+<body>
     <!-- Hovedseksjon som inneholder navigasjonslinjen -->
-           <div class="navbar">  
-               <div class="logo-container">
-                   <a id="navbar__logo">MHAI's nettside</a>
-               </div>
-               <!-- Logo for nettsiden -->
-               <div class="navbar__container">
-                   <md-icon-button id="usage-anchor"><md-icon>menu</md-icon></md-icon-button>
-                   <md-menu id="usage-menu" anchor="usage-anchor" positioning="fixed">
-                       <a href="#main-1" class="navbar__links"><md-menu-item> 
-                       <div slot="headline">Projekt</div>
-                       </md-menu-item></a>
-                       <md-menu-item>
-                       <a href="#Ide" class="navbar__links"><div slot="headline">Ide</div> 
-                       </md-menu-item></a>
-                       <a href=#kontakt class="navbar__links"><md-menu-item>
-                       <div slot="headline">Kontakt</div>
-                       </md-menu-item></a>
-                       
-                       <md-menu-item>
-                           <div slot="headline">
-                               <li class="navbar__textSize">
-                                   <a>Text Size</a>
-                                   <button class="button2" onclick="changeFontSize('increase')"> + </button>
-                                   <button class="button2" onclick="changeFontSize('decrease')"> - </button>
-                               </li>
-                           </div>
-                       </md-menu-item>
-                   </md-menu>
-               </div>
-                
-                <script>
-                    function changeFontSize(action) {
-                        const body = document.body;
-                        const currentSize = window.getComputedStyle(body).fontSize;
-                        let newSize = parseFloat(currentSize);
-        
-                        if (action === 'increase') {
-                            newSize += 2; // Øk med 2 piksler
-                        } else {
-                            newSize -= 2; // Reduser med 2 piksler
-                        }
-        
-                        body.style.fontSize = newSize + 'px';
-                        localStorage.setItem('fontSize', newSize + 'px'); // Lagre tekststørrelse
-                    }
-        
-        
-                    function applySavedPreferences() {
-                        const savedFontSize = localStorage.getItem('fontSize');
-                        const savedLineHeight = localStorage.getItem('lineHeight');
-        
-                        if (savedFontSize) {
-                            document.body.style.fontSize = savedFontSize;
-                        }
-                    }
-                </script>     
-            </div>      
-      
-    <main> 
+    <header style="height: 10vh; width: 100%;">
+        <div class="navbar">
+            <div style="margin:0 10px 0 10px; height: inherit; display: flex; align-content:center; width:calc(100% - 20px);">
+                <div class="logo-container">
+                    <a id="navbar__logo">Adea's Nettside</a>
+                </div>
+                <!-- Logo for nettsiden -->
+                <div class="navbar__container">
+                    <md-icon-button id="usage-anchor" aria-label="Contact menu"><md-icon>menu</md-icon></md-icon-button>
+                    <md-menu id="usage-menu" anchor="usage-anchor" positioning="fixed">
+    
+                        <a href="#main-1" class="navbar__links">
+                            <md-menu-item>
+                                <div slot="headline">Projekt</div>
+                            </md-menu-item>
+                        </a>
+    
+                        <a href="#prosjekt" class="navbar__links">
+                            <md-menu-item>
+                                <div slot="headline">Ide</div>
+                            </md-menu-item></a>
+    
+                        <a href=#kontakt class="navbar__links">
+                            <md-menu-item>
+                                <div slot="headline">Kontakt</div>
+                            </md-menu-item></a>
+                    </md-menu>
+                    <div class="navbar__textSize">
+                        <p style="color: #1c438f;">Text Size</p>
+                        <button class="button2" onclick="changeFontSize('increase')"> + </button>
+                        <button class="button2" onclick="changeFontSize('decrease')"> - </button>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main onload="applySavedPreferences()"> 
         <!-- Hovedinnholdsområde -->
         <div id="main-1"></div>
         <section class="main__content" id="main-2">
@@ -126,7 +114,6 @@
             </section>
 
 
-
             <section id="kontakt">
                 <header id="header2"> </header>
                 <!-- Seksjon for kontaktinformasjon -->
@@ -134,7 +121,7 @@
                 <p> 
                     Opplever du problemer, eller har spørsmål? Ta kontakt med <a href="mailto:adea.hafnor@gmail.com">adea.hafnor@gmail.com</a>, for hjelp eller eventueller forbedringer eller klager.
                     Vil du vite mer om entrepenøren gå inn på 
-                    <a href="http://127.0.0.1:5500/Min_nettside/Om_meg/index.html#bio">Adea's nettside</a> 
+                    <a href="http://127.0.0.1:5500/MHAI_nettside/MHAI/index.html#bio">MHAI's nettside</a> 
                 </p>
             </section>
 
@@ -142,18 +129,17 @@
                 <section class="main__imge--container">
                     <!-- Bilde-seksjon for å vise en logo -->
                     <picture>
-                        <img src="blider/MentalHAI-logo.jpg" alt="MHAI sin logo" />
+                        <img loading="lazy" src="blider/MentalHAI-logo.jpg" alt="MHAI sin logo" />
                     </picture>
                 </section>
             </div>
     </main>
 
-    <!-- Kobler til en ekstern JavaScript-fil for funksjonalitet -->
-    <script type="module" src="Scripter/main.js"></script>
-    <footer>
-        <!-- Bunntekst med opphavsrettsinformasjon -->
-        <p>&copy; 2025 MHAI's nettside.</p>
-    </footer>
+<footer>
+    <!-- Bunntekst med opphavsrettsinformasjon -->
+    <p>&copy; 2025 Min Portefølje.</p>
+</footer>
+<!-- Kobler til en ekstern JavaScript-fil for funksjonalitet -->
+<script type="module" src="Scripter/main.js"></script>
 </body>
 </html>
-
