@@ -200,8 +200,8 @@ main {
 /* Stil for containeren som inneholder bilder */
 .main__imge--container {
     display: block; /* Bruker blokkvisning */
-    height: 100%; /* Setter høyden til 100% av foreldreelementet */
-    width: 30vw; /* Setter bredden til 100% av foreldreelementet */
+    height: 30rem; /* Setter høyden til 100% av foreldreelementet */
+    width: 20rem; /* Setter bredden til 100% av foreldreelementet */
     position: relative;
 }
 
@@ -221,14 +221,7 @@ img {
 
 /* Media query for skjermstørrelser opp til 1000px */
 @media screen and (max-width: 1100px) {
-    img {
-        width: 250px;
-    }
     /* Stil for tredje hovedseksjon & bilde */
-    .main__imge--container {
-        top: -59rem;
-        left: -30rem;
-    }
     /* Stil for hovedinnholdet */
     .main__content {
         text-align: center; /* Sentrerer teksten */
@@ -246,10 +239,6 @@ img {
     }
 
     /* Stil for første hovedseksjon */
-    #main-1 {
-        display: grid; /* Bruker grid-layout */
-        flex: 100%;
-    }
 
     #main-2 {
         display: grid;
@@ -264,69 +253,3 @@ img {
 }
 
 /* Media query for skjermstørrelser opp til 928px */
-@media screen and (max-width: 928px) {
-    .main__imge--container {
-        left: -25rem;
-        top: -45rem;
-    }
-/* Media query for skjermstørrelser opp til 840px */
-@media screen and (max-width: 840px) {
-    .main__imge--container {
-        top: -68rem;
-        left: -6rem;
-    }
-
-    img {
-        width: 220px;
-    }
-
-}
-
-/* Media query for skjermstørrelser opp til 775px */
-@media screen and (max-width: 780px) {
-    .main__imge--container {
-        top: -71rem;
-        left: -9rem;
-    }
-}
-
-/* Media query for skjermstørrelser opp til 700px */
-@media screen and (max-width: 700px) {
-
-    /* Stil for bildecontaineren i media query */
-    .main__imge--container {
-        left: -10rem;
-        top: -72.5rem;
-        margin: 0;
-    }
-    
-    img {
-        width: 200px;
-    }
-}
-/* Media query for skjermstørrelser opp til 605px */
-@media screen and (max-width: 605px) {
-
-    /* Stil for bildecontaineren i media query */
-    .main__imge--container {
-        position: relative;
-        left: -10rem;
-        top: -77rem;
-        margin: 0;
-    }
-}
-
-
-/* Media query for skjermstørrelser opp til 540px */
-@media screen and (max-width: 540px) {
-    /* Stil for bildecontaineren i media query */
-    .main__imge--container {
-        position: relative;
-        left: -7rem;
-        top: -80rem;
-        margin: 0;
-    }
-    img {
-        width: 150px;
-    }
-}
