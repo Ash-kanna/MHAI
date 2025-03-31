@@ -164,6 +164,8 @@ main {
 #main-1 {
     display: block; /* Bruker block-layout */
     flex: 5%; /* Setter fleksibilitet */
+    align-content: center;
+    justify-content: end;
 }
 /* Stil for andre hovedseksjon */
 #main-2 {
@@ -175,11 +177,7 @@ main {
     text-align: center; /* Sentrerer teksten */
     background-size: 100%; /* Setter bakgrunnsstørrelse */
 }
-/* Stil for tredje hovedseksjon */
-#main-3 {
-    display: block; /* Bruker blokkvisning */
-    flex: 5%; /* Setter fleksibilitet */
-}
+
 /* Stil for overskrifter */
 .overskrifter {
     font-size: 3rem; /* Setter fontstørrelse til 3rem */
@@ -203,10 +201,13 @@ main {
 .main__imge--container {
     display: block; /* Bruker blokkvisning */
     height: 100%; /* Setter høyden til 100% av foreldreelementet */
-    width: 100%; /* Setter bredden til 100% av foreldreelementet */
+    width: 30vw; /* Setter bredden til 100% av foreldreelementet */
     position: relative;
-    top: -60rem;
-    left: -40rem;
+}
+
+img {
+    width: 300px;
+    height: auto;
 }
 
 @media (min-width: 1200px) {
@@ -219,15 +220,14 @@ main {
 }
 
 /* Media query for skjermstørrelser opp til 1000px */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     img {
-        height: 400px;
-        width: auto;
+        width: 250px;
     }
     /* Stil for tredje hovedseksjon & bilde */
     .main__imge--container {
-        top: -20rem;
-        left: -6rem;
+        top: -59rem;
+        left: -30rem;
     }
     /* Stil for hovedinnholdet */
     .main__content {
@@ -266,14 +266,9 @@ main {
 /* Media query for skjermstørrelser opp til 928px */
 @media screen and (max-width: 928px) {
     .main__imge--container {
-        top: -67.2rem;
-        left: -9rem;
+        left: -25rem;
+        top: -45rem;
     }
-
-    img {
-        width: 250px;
-    }
-}
 /* Media query for skjermstørrelser opp til 840px */
 @media screen and (max-width: 840px) {
     .main__imge--container {
