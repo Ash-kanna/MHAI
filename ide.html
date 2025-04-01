@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <!-- Setter tegnkoding for dokumentet -->
+    <meta charset="UTF-8">
+    <!-- Sikrer at siden er responsiv på forskjellige enheter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="ogevneno">
+    <meta name="keywords" content="MHAI">
+    <meta property="og:title" content="MHAI's Nettside">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ash-kanna.github.io/MHAI/">
+    <meta property="og:image" content="blider/mhai.png?format=webp">
+    <meta property="og:site_name" content="MHAI's nettside">
+
+    <link rel="icon" href="blider/mhai.png?format=webp" sizes="any">
+    <link rel="apple-touch-icon" href="blider/mhai.png?format=webp" aria-label="Default">
+    <meta name="theme-color" content="#ffff">
+
+    <!-- Tittel på nettsiden som vises i nettleserfanen -->
+    <title>MHAI's Nettside | Entrepenør ide | inkludere prosjekt informasjon, ide og mer </title>
+    <!-- Kobler til en ekstern CSS-stilark for ekstra styling -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="kontakt.html">
+
+    <!--  Importere ikoner og Material Design  -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap&display=optional&display=fallback" rel="stylesheet">
+    <script type="importmap">
+        {
+          "imports": {
+            "@material/web/": "https://esm.run/@material/web/"
+          }
+        }
+    </script>
+    <script type="module">
+        import '@material/web/common.js';
+    </script>
+</head>
+<body>
+    <!-- Hovedseksjon som inneholder navigasjonslinjen -->
+    <header style="height: 10vh; width: 100%;">
+        <div class="navbar">
+            <div style="margin:0 10px 0 10px; height: inherit; display: flex; align-content:center; width:calc(100% - 20px);">
+                <div class="logo-container">
+                    <a id="navbar__logo">MHAI's Nettside</a>
+                </div>
+                <!-- Logo for nettsiden -->
+                <div class="navbar__container">
+                    <md-icon-button id="usage-anchor" aria-label="Contact menu"><md-icon>menu</md-icon></md-icon-button>
+                    <md-menu id="usage-menu" anchor="usage-anchor" positioning="fixed">
+    
+                        <a href="index.html" class="navbar__links">
+                            <md-menu-item>
+                                <div slot="headline">Hjem</div>
+                            </md-menu-item>
+                        </a>
+    
+                        <a href="ide.html" class="navbar__links">
+                            <md-menu-item>
+                                <div slot="headline">Ide</div>
+                            </md-menu-item></a>
+    
+                        <a href="kontakt.html" class="navbar__links">
+                            <md-menu-item>
+                                <div slot="headline">Kontakt</div>
+                            </md-menu-item></a>
+                    </md-menu>
+                    <div class="navbar__textSize">
+                        <p style="color: #1c438f;">Text Size</p>
+                        <button class="button2" onclick="changeFontSize('increase')"> + </button>
+                        <button class="button2" onclick="changeFontSize('decrease')"> - </button>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main onload="applySavedPreferences()"> 
+        <!-- Hovedinnholdsområde -->
+        <div id="main-1">
+            <section class="main__imge--container">
+                <!-- Bilde-seksjon for å vise en logo -->
+                <picture>
+                    <img loading="lazy" src="blider/MentalHAI-logo.jpg" alt="MHAI sin logo. Gull ring med en hjerne i midten sammen med teksten Mental Healt AI" />
+                </picture>
+            </section>
+
+            <section id="main__content"> 
+                <h2 class="overskrifter"> Ide</h2>
+                <h3>Inspirasjon</h3>
+                <p> Jeg har altid syntes hvordan jeg og de rundt meg reagerer basert på hvordan vi har 
+                    vokst opp og oppfatter til er interesant. Så når jeg skulle komme på en idea om hva 
+                    jeg kan lage i fremtiden med teknologi syntes jeg M.H.A.I. var perfekt som mitt første 
+                    prosjekt. Jeg har lest flere artikler som handler om at ungdoms mentale helse blir værre 
+                    og værre med årende som går. Det er her jeg vil at M.H.A.I. skal hjelpe til. </p>
+
+                <h3>Passende kunder</h3>
+                <p> M.H.A.I. kan være nyttig for alle som ånsker å prate om hendelser eller følelser i livet dems, 
+                    uten om å betale like mye som en onkelig terapaut. Med det i tankene må alle brukere være klar 
+                    over at M.H.A.I. ikke er en onkelig terapaut og at det er hvorfor prisen er lavere. </p>
+
+                <h3>Hva jobber M.H.A.I. mot?</h3>
+                <p>M.H.a.I er ment for å gjøre den mentale helsen til folk bedre enn det den er nå. M.H.A.I's mål 
+                    er nemlig å få alle som bruker den til å føle at de kan snakke om til å på en måte slippe tonge
+                    følelser eller hendelser med noen andre samtidig som de forblir anonyme og kommer ikke til å "byrde"
+                    noen andre med hva de forteller om. </p>
+            </section>
+    </main>
+
+<footer>
+    <!-- Bunntekst med opphavsrettsinformasjon -->
+    <p>&copy; 2025 Min Portefølje.</p>
+</footer>
+<!-- Kobler til en ekstern JavaScript-fil for funksjonalitet -->
+<script type="module" src="Scripter/main.js"></script>
+</body>
+</html>
