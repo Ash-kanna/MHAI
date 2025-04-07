@@ -140,7 +140,7 @@ nav {
 body {
     background-color: rgb(159, 231, 228); /* Setter bakgrunnsfarge */
     min-height: fit-content; /* Setter minimum høyde til innholdets høyde */
-    max-height: 1645px; /* Setter maksimal høyde */
+    max-height: 100%; /* Setter maksimal høyde */
     min-width: fit-content; /* Setter minimum bredde til innholdets bredde */
     max-width: 100%; /* Setter maksimal bredde til 100% */
 }
@@ -263,6 +263,6 @@ img {
     }
 
     #main-1 {
-        width: 100px;
+        width: 140px;
     }
 }
