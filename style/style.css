@@ -159,7 +159,7 @@ main {
     width: calc(100% - 60px); /* Setter bredden til 100% */
     max-height: 1500px; /* Setter maksimal høyde */
     padding: 20px; /* Legger til padding */
-    padding-bottom: 30rem;
+    padding-bottom: 40rem;
 }
 /* Stil for første hovedseksjon */
 #main-1 {
