@@ -179,6 +179,17 @@ main {
     background-size: 100%; /* Setter bakgrunnsstørrelse */
 }
 
+#main-3 {
+    display: grid; /* Bruker frid-layout */
+    flex: 24rem; /* Setter fleksibilitet */
+    align-content: center;
+    justify-content: baseline;
+    flex-direction: column; /* Setter retning til kolonne */
+    justify-self: center; /* Sentrerer innholdet vertikalt */
+    text-align: center; /* Sentrerer teksten */
+    background-size: 100%; /* Setter bakgrunnsstørrelse */
+}
+
 /* Stil for overskrifter */
 .overskrifter {
     font-size: 3rem; /* Setter fontstørrelse til 3rem */
