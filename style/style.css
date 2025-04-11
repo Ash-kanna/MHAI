@@ -166,7 +166,7 @@ main {
     display: block; /* Bruker block-layout */
     flex: 5%; /* Setter fleksibilitet */
     align-content: center;
-    justify-content: end;
+    justify-content: center;
 }
 /* Stil for andre hovedseksjon */
 #main-2 {
@@ -181,13 +181,15 @@ main {
 
 #main-3 {
     display: grid; /* Bruker frid-layout */
-    flex: 24rem; /* Setter fleksibilitet */
+    flex: 10rem; /* Setter fleksibilitet */
     align-content: center;
-    justify-content: baseline;
+    justify-content: center;
     flex-direction: column; /* Setter retning til kolonne */
     justify-self: center; /* Sentrerer innholdet vertikalt */
     text-align: center; /* Sentrerer teksten */
     background-size: 100%; /* Setter bakgrunnsstørrelse */
+    position: relative;
+    height: -10vh;
 }
 
 /* Stil for overskrifter */
