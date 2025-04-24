@@ -47,6 +47,15 @@ nav {
     display: flex;
     background-color: rgb(255, 255, 255);
 }
+
+#text {
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+
 /* Stil for navigasjonslinjen */
 .navbar {
     display: flex; /* Bruker flexbox for layout */
@@ -152,6 +161,8 @@ body {
 /* Stil for main-elementet */
 main {
     display: flex; /* Bruker flexbox for layout */
+    align-items: center;
+    justify-content: center;
     margin: 10px; /* Legger til margin rundt main-elementet */
     height: auto; /* Høyden tilpasses innholdet */
     background-color: rgb(233, 254, 255); /* Setter bakgrunnsfarge til hvit */
