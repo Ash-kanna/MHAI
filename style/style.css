@@ -48,6 +48,32 @@ nav {
     background-color: rgb(255, 255, 255);
 }
 
+
+.card2 {
+    background-color: rgb(159, 231, 228);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 25rem;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+
+.card-text {
+    font-size: 1em;
+    color: #000000;
+}
+
 #text {
     justify-self: center;
     justify-content: center;
@@ -186,6 +212,7 @@ main {
     flex-direction: column; /* Setter retning til kolonne */
     align-items: center; /* Sentrerer innholdet horisontalt */
     justify-self: center; /* Sentrerer innholdet vertikalt */
+    justify-content: center;
     text-align: center; /* Sentrerer teksten */
     background-size: 100%; /* Setter bakgrunnsstørrelse */
 }
