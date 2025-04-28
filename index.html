@@ -48,7 +48,7 @@
                 </div>
                 <!-- Logo for nettsiden -->
                 <div class="navbar__container">
-                    <md-icon-button id="usage-anchor" aria-label="Contact menu"><md-icon>menu</md-icon></md-icon-button>
+                    <md-icon-button id="usage-anchor" aria-label="Contact menu" style=".standard:hover{color:#ffffff;} .standard{color:#ffffff;}"><md-icon style="color: #ffffff;">menu</md-icon></md-icon-button>
                     <md-menu id="usage-menu" anchor="usage-anchor" positioning="fixed">
     
     
@@ -78,7 +78,7 @@
                             </md-menu-item></a>
                     </md-menu>
                     <div class="navbar__textSize">
-                        <p style="color: #1c438f;">Text Size</p>
+                        <p style="color: #ffffff;">Text Size</p>
                         <button class="button2" onclick="changeFontSize('increase')"> + </button>
                         <button class="button2" onclick="changeFontSize('decrease')"> - </button>
                    </div>
@@ -87,25 +87,32 @@
         </div>
     </header>
     
-    <main onload="applySavedPreferences()"> 
+    <main onload="applySavedPreferences()"style="justify-content: center; align-items: center; padding-bottom:10rem;"> 
         <!-- Hovedinnholdsområde -->
-        <div id="main-1">
-            <section class="main__imge--container">
+        <div id="main-2" >
+            <section>
                 <!-- Bilde-seksjon for å vise en logo -->
                 <picture>
                     <img loading="lazy" src="blider/MentalHAI-logo.png" alt="MHAI sin logo. Gull ring med en hjerne i midten sammen med teksten Mental Healt AI" />
                 </picture>
             </section>
+            <section class="main__content"style="justify-content: center; align-items: center;">
+                <div class="card2">
+                        <p class="card-text">M.H.A.I er kort for "Mental Healt Artifitial Intelligence".
+                        Prosjektet begynnte ved starten av 2025. 
+                        MHAI skal bli en AI-chatbot hvor forlk kan prate med AI-en om hvordan de føler seg og 
+                        få tips og råd som en/fler psykolog/er har hjelpet Ai-en å forstå og gi.</p>
+                </div>
+            </section>
         </div>
-        <section class="main__content" id="main-2">
-            <section>
-                <h2 class="overskrifter">Hjem</h2>
-                    <p>M.H.A.I er kort for "Mental Healt Artifitial Intelligence".
-                    Prosjektet begynnte ved starten av 2025. 
-                    MHAI skal bli en AI-chatbot hvor forlk kan prate med AI-en om hvordan de føler seg og 
-                    få tips og råd som en/fler psykolog/er har hjelpet Ai-en å forstå og gi.</p>
-                </section>
-        </section>
+        <div class="container">
+            <div class="drop" style="--clr:rgb(111, 163, 161);">
+                <div class="content">
+                    <h2>01</h2>
+                    <p>Les mer om fremdriften av MHAI-chatbot</p>
+                    <a href="produkt.html">Fremdrift</a>
+                </div>
+            </div>
     </main>
 
 <footer>

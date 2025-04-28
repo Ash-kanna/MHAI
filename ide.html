@@ -48,7 +48,7 @@
                 </div>
                 <!-- Logo for nettsiden -->
                 <div class="navbar__container">
-                    <md-icon-button id="usage-anchor" aria-label="Contact menu"><md-icon>menu</md-icon></md-icon-button>
+                    <md-icon-button id="usage-anchor" aria-label="Contact menu" style=".standard:hover{color:#ffffff;} .standard{color:#ffffff;}"><md-icon style="color: #ffffff;">menu</md-icon></md-icon-button>
                     <md-menu id="usage-menu" anchor="usage-anchor" positioning="fixed">
     
                         
@@ -81,7 +81,7 @@
 
                     </md-menu>
                     <div class="navbar__textSize">
-                        <p style="color: #1c438f;">Text Size</p>
+                        <p style="color: #ffffff;">Text Size</p>
                         <button class="button2" onclick="changeFontSize('increase')"> + </button>
                         <button class="button2" onclick="changeFontSize('decrease')"> - </button>
                    </div>
@@ -90,18 +90,16 @@
         </div>
     </header>
     
-    <main onload="applySavedPreferences()"> 
+    <main onload="applySavedPreferences()" style="flex-direction: column;"> 
         <!-- Hovedinnholdsområde -->
-        <div id="main-1">
-            <section class="main__imge--container">
+        <div id="main-1" id="main__content">
                 <!-- Bilde-seksjon for å vise en logo -->
                 <picture>
-                    <img loading="lazy" src="blider/MentalHAI-logo.png" alt="MHAI sin logo. Gull ring med en hjerne i midten sammen med teksten Mental Healt AI" />
+                    <img style="justify-self: center; align-self: center;"   loading="lazy" src="blider/MentalHAI-logo.png" alt="MHAI sin logo. Gull ring med en hjerne i midten sammen med teksten Mental Healt AI" />
                 </picture>
-            </section>
         </div>
 
-            <section id="main__content" id="main-2"> 
+            <section id="main__content" id="main-2" style="width: 20rem;"> 
                 <h2 class="overskrifter"> Ide</h2>
                 <section id="text"> 
                     <h3>Inspirasjon</h3>
