@@ -226,16 +226,11 @@ main {
 }
 
 #main-3 {
-    display: grid; /* Bruker frid-layout */
-    flex: 10rem; /* Setter fleksibilitet */
-    align-content: center;
+    display: flex;
+    flex: 5%;
+    width: 30rem;
     justify-content: center;
-    flex-direction: column; /* Setter retning til kolonne */
-    justify-self: center; /* Sentrerer innholdet vertikalt */
-    text-align: center; /* Sentrerer teksten */
-    background-size: 100%; /* Setter bakgrunnsstørrelse */
-    position: relative;
-    height: -10vh;
+    flex-direction: row-reverse;
 }
 
 .container{

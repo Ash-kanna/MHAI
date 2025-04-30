@@ -47,6 +47,47 @@
         transform: rotateY(180deg);
     }
 
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 18rem;
+        border: 1px solid #dbdbdb;
+    }
+    
+    th, td {
+        text-align: center;
+        padding: 16px;
+    }
+    
+    th:first-child, td:first-child {
+        text-align: left;
+    }
+    
+    tr:nth-child(odd) {
+        background-color: #dbf5cd
+    }
+
+    tr:last-child{
+        background-color: rgb(233, 254, 255);
+    }
+    
+    tr:nth-child(2){
+        background-color: #f4e7e7;
+    }
+    tr:nth-child(4){
+        background-color: #f4e7e7;
+    }
+    tr:nth-child(5){
+        background-color: #f4e7e7;
+    }
+
+    .fa-check {
+        color: green;
+    }
+    
+    .fa-remove {
+        color: red;
+    }
 </style>
 <head>
     <!-- Setter tegnkoding for dokumentet -->
@@ -66,6 +107,8 @@
     <link rel="apple-touch-icon" href="blider/MentalHAI-logo.png?format=webp" aria-label="Default">
     <meta name="theme-color" content="#ffff">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Tittel på nettsiden som vises i nettleserfanen -->
     <title>MHAI's Nettside | Entrepenør ide | inkludere prosjekt informasjon </title>
     <!-- Kobler til en ekstern CSS-stilark for ekstra styling -->
@@ -134,7 +177,7 @@
         </div>
     </header>
     
-    <main onload="applySavedPreferences()" style="padding-bottom:23.5rem;"> 
+    <main onload="applySavedPreferences()" style="padding-bottom:23.9rem;"> 
         <!-- Hovedinnholdsområde -->
         <section class="main__content" id="main-2">
         <div id="main-3">
@@ -156,12 +199,33 @@
                         MHAI chatbot er under utviklig, oppdateringer kommer...
                     </p>  
                     </section>
+        </section>        
+        <section id="main-3">
+            <table>
+            <tr>
+                <td>Ide</td>
+                <td><i class="fa fa-check"></i></td>
+            </tr>
+            <tr>
+                <td>Foretningsplan</td>
+                <td><i class="fa fa-remove"></i></td>
+            </tr>
+            <tr>
+                <td>Bedrift nettside</td>
+                <td><i class="fa fa-check"></i></td>
+            </tr>
+            <tr>
+                <td>Chatbot nettside</td>
+                <td><i class="fa fa-remove"></i></td>
+            </tr>
+            <tr>
+                <td>Chatbot</td>
+                <td><i class="fa fa-remove"></i></td>
+            </tr>
+            </table>
         </section>
-
     </main>
 
-
-        
 <footer>
     <!-- Bunntekst med opphavsrettsinformasjon -->
     <p>&copy; 2025 Min Portefølje.</p>
