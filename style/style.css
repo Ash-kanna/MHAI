@@ -401,6 +401,11 @@ img {
         background-color: #000000; /* Setter bakgrunnsfarge til svart */
         color: rgb(255, 255, 255); /* Setter tekstfarge til hvit */
     }
+    
+    body {
+        transform: scale(0.9); /* zoom out 90% */
+        justify-self:center;
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -409,6 +414,11 @@ img {
     }
     #main-1 {
         width: 200px;
+    }
+
+    body {
+        transform: scale(0.77); /* zoom out 77% */
+        justify-self:center;
     }
 }
 
@@ -420,5 +430,10 @@ img {
 
     #main-1 {
         width: 140px;
+    }
+    
+    body {
+        transform: scale(0.57); /* zoom out 57% */
+        justify-self:center;
     }
 }
