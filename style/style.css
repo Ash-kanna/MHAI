@@ -14,6 +14,7 @@ body {
     height: max-content; /* Setter høyden til innholdets høyde */
     margin: 0; /* Fjerner standard margin */
     padding: 0; /* Fjerner standard padding */
+    overflow-x: hidden;
     font-size: 16px; /* Default font size */
     line-height: 30px; /* Default line height */
     background-color: #fff; /* Default background color */
@@ -402,10 +403,6 @@ img {
         color: rgb(255, 255, 255); /* Setter tekstfarge til hvit */
     }
     
-    body {
-        transform: scale(0.9); /* zoom out 90% */
-        justify-self:center;
-    }
 }
 
 @media screen and (max-width: 650px) {
@@ -416,10 +413,6 @@ img {
         width: 200px;
     }
 
-    body {
-        transform: scale(0.77); /* zoom out 77% */
-        justify-self:center;
-    }
 }
 
 /* Media query for skjermstørrelser opp til 350px */
@@ -430,10 +423,5 @@ img {
 
     #main-1 {
         width: 140px;
-    }
-    
-    body {
-        transform: scale(0.57); /* zoom out 57% */
-        justify-self:center;
     }
 }
